@@ -18,9 +18,14 @@ public class GreetingsController {
      * @param name the name to greet
      * @return greeting text
      */
-    @RequestMapping(value = "/{name}", method = RequestMethod.GET)
+    @RequestMapping(value = "/mostrarnome/{name}", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
     public String greetingText(@PathVariable String name) {
-        return "Cadastro de pessoas " + name + "!";
+        return "Cadastro de pessoas:  " + name + "!";
+    }
+    @RequestMapping(value = "/boasvindas/{nome}", method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    public String boasVindas(@PathVariable String nome) {
+    	return "Seja bem vindo Anderson " + nome + "!";
     }
 }
